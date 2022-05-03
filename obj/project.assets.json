@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lizzy\\desktop\\classes\\programingClasses\\cse210-01\\cse210-01.csproj",
-      "projectName": "cse210-01",
-      "projectPath": "C:\\Users\\lizzy\\desktop\\classes\\programingClasses\\cse210-01\\cse210-01.csproj",
+      "projectUniqueName": "C:\\Users\\lizzy\\Desktop\\Classes\\programingClasses\\cse210_01\\cse210_01.csproj",
+      "projectName": "cse210_01",
+      "projectPath": "C:\\Users\\lizzy\\Desktop\\Classes\\programingClasses\\cse210_01\\cse210_01.csproj",
       "packagesPath": "C:\\Users\\lizzy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lizzy\\desktop\\classes\\programingClasses\\cse210-01\\obj\\",
+      "outputPath": "C:\\Users\\lizzy\\Desktop\\Classes\\programingClasses\\cse210_01\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lizzy\\AppData\\Roaming\\NuGet\\NuGet.Config"

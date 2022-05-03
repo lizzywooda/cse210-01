@@ -24,7 +24,7 @@ namespace cse210_01
         static List<string> makeBoard()
         {
             var board = new List<string>();
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < 9; i++)
             {
                 string j = i.ToString();
                 board.Add(j);
