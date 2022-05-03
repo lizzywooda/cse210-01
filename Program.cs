@@ -76,7 +76,21 @@ namespace cse210_01
                 return false;
             }
         }
-        static void move()
+        static void move( string player, List<string> board){
+            Console.WriteLine($"{player}'s move. Choose a spot (0-7)");
+            int i = Console.Read();
+            board[i] = player;
+        }
+        static string nextPlayer(string current){
+            if (current == "" || current == "O")
+            {
+                return "X";
+            }
+            else if (current == "X")
+            {
+                return "O";
+            }
+        }
         }
     }
 }
