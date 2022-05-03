@@ -81,16 +81,7 @@ namespace cse210_01
             int i = Console.Read();
             board[i] = player;
         }
-        static string nextPlayer(string current){
-            if (current == "" || current == "O")
-            {
-                return "X";
-            }
-            else if (current == "X")
-            {
-                return "O";
-            }
-        }
+        
         }
     }
 }
