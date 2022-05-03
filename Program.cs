@@ -76,6 +76,7 @@ namespace cse210_01
                 return false;
             }
         }
+        static void move()
         }
     }
 }
