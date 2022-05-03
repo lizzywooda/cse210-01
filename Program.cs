@@ -10,8 +10,15 @@ namespace cse210_01
     {
         static void Main(string[] args)
         {
-            makeBoard();
+            var board = makeBoard();
             string player = getPlayer("");
+            while (checkWinner(board) || checkDraw(board)){
+                writeBoard(board);
+                move(player, board);
+                player = getPlayer(player);
+            }
+            writeBoard(board);
+            Console.WriteLine("Good game!");
         }
         static List<string> makeBoard()
         {
@@ -23,65 +30,83 @@ namespace cse210_01
             }
             return board;
         }
-        static void writeBoard(List<string> board){
+        static void writeBoard(List<string> board)
+        {
             Console.WriteLine($"{board[0]}|{board[1]}|{board[2]}");
             Console.WriteLine("-+-+-");
             Console.WriteLine($"{board[3]}|{board[4]}|{board[5]}");
             Console.WriteLine("-+-+-");
             Console.WriteLine($"{board[6]}|{board[7]}|{board[8]}");
         }
-        static string getPlayer(string player){
-            
-            if (player == "" || player == "O"){
+        static string getPlayer(string player)
+        {
+
+            if (player == "" || player == "O")
+            {
                 return "X";
             }
-            else {
+            else
+            {
                 return "O";
             }
-        static bool checkDraw(List<string> board){
-            for (int i = 0; i < 8; i++){
+        }
+        static bool checkDraw(List<string> board)
+        {
+            for (int i = 0; i < 8; i++)
+            {
                 if (board[i] != "X" && board[i] != "O")
                 {
-                    return false;
+                    return true;
                 }
-                return true;
-            }
-        }
-        static bool checkWinner(List<string> board){
-            if (board[0] == board[1] && board[1] == board[2]){
-                return true;
-            }
-            else if (board[3] == board[4] && board[4] == board[5]){
-                return true;
-            }
-            else if (board[6] == board[7] && board[7] == board[8]){
-                return true;
-            }
-            else if (board[0] == board[3] && board[3] == board[6]){
-                return true;
-            }
-            else if (board[1] == board[4] && board[4] == board[7]){
-                return true;
-            }
-            else if (board[2] == board[5] && board[5] == board[8]){
-                return true;
-            }
-            else if (board[0] == board[4] && board[4] == board[8]){
-                return true;
-            }
-            else if (board[2] == board[4] && board[4] == board[6]){
-                return true;
-            }
-            else{
                 return false;
             }
         }
-        static void move( string player, List<string> board){
+        static bool checkWinner(List<string> board)
+        {
+            if (board[0] == board[1] && board[1] == board[2])
+            {
+                return false;
+            }
+            else if (board[3] == board[4] && board[4] == board[5])
+            {
+                return false;
+            }
+            else if (board[6] == board[7] && board[7] == board[8])
+            {
+                return false;
+            }
+            else if (board[0] == board[3] && board[3] == board[6])
+            {
+                return false;
+            }
+            else if (board[1] == board[4] && board[4] == board[7])
+            {
+                return false;
+            }
+            else if (board[2] == board[5] && board[5] == board[8])
+            {
+                return false;
+            }
+            else if (board[0] == board[4] && board[4] == board[8])
+            {
+                return false;
+            }
+            else if (board[2] == board[4] && board[4] == board[6])
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        static void move(string player, List<string> board)
+        {
             Console.WriteLine($"{player}'s move. Choose a spot (0-7)");
             int i = Console.Read();
             board[i] = player;
         }
-        
+
         }
     }
 }
