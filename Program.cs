@@ -12,7 +12,8 @@ namespace cse210_01
         {
             var board = makeBoard();
             string player = getPlayer("");
-            while (checkWinner(board) || checkDraw(board)){
+            while (checkWinner(board) || checkDraw(board))
+            {
                 writeBoard(board);
                 move(player, board);
                 player = getPlayer(player);
@@ -58,8 +59,8 @@ namespace cse210_01
                 {
                     return true;
                 }
-                return false;
-            }
+            }          
+            return false;
         }
         static bool checkWinner(List<string> board)
         {
@@ -107,6 +108,6 @@ namespace cse210_01
             board[i] = player;
         }
 
-        }
     }
 }
+
