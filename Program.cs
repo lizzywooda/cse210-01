@@ -16,7 +16,7 @@ namespace cse210_01
             {
                 writeBoard(board);
                 move(player, board);
-                player = getPlayer(player);
+                player = getPlayer(player);   
             }
             writeBoard(board);
             Console.WriteLine("Good game!");
@@ -68,31 +68,31 @@ namespace cse210_01
             {
                 return false;
             }
-            else if (board[3] == board[4] && board[4] == board[5])
+            if (board[3] == board[4] && board[4] == board[5])
             {
                 return false;
             }
-            else if (board[6] == board[7] && board[7] == board[8])
+            if (board[6] == board[7] && board[7] == board[8])
             {
                 return false;
             }
-            else if (board[0] == board[3] && board[3] == board[6])
+            if (board[0] == board[3] && board[3] == board[6])
             {
                 return false;
             }
-            else if (board[1] == board[4] && board[4] == board[7])
+            if (board[1] == board[4] && board[4] == board[7])
             {
                 return false;
             }
-            else if (board[2] == board[5] && board[5] == board[8])
+            if (board[2] == board[5] && board[5] == board[8])
             {
                 return false;
             }
-            else if (board[0] == board[4] && board[4] == board[8])
+            if (board[0] == board[4] && board[4] == board[8])
             {
                 return false;
             }
-            else if (board[2] == board[4] && board[4] == board[6])
+            if (board[2] == board[4] && board[4] == board[6])
             {
                 return false;
             }
@@ -103,9 +103,10 @@ namespace cse210_01
         }
         static void move(string player, List<string> board)
         {
-            Console.WriteLine($"{player}'s move. Choose a spot (0-7)");
-            int i = Console.Read();
-            board[i] = player;
+            Console.WriteLine($"{player}'s move. Choose a spot (0-8)");
+            string i = Console.ReadLine();
+            int j = Int32.Parse($"{i}");
+            board[j] = player;
         }
 
     }
