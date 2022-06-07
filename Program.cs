@@ -16,7 +16,9 @@ namespace cse210_01
             {
                 writeBoard(board);
                 move(player, board);
-                player = getPlayer(player);   
+                player = getPlayer(player);
+                checkWinner(board);
+                checkDraw(board);   
             }
             writeBoard(board);
             Console.WriteLine("Good game!");
